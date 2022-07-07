@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"github.com/InVisionApp/go-health"
 	"github.com/InVisionApp/go-health/handlers"
-	prometheusPlugin "github.com/ProtocolONE/go-micro-plugins/wrapper/monitoring/prometheus"
-	"github.com/ProtocolONE/mfa-service/pkg"
-	"github.com/ProtocolONE/mfa-service/pkg/proto"
 	"github.com/go-redis/redis"
 	"github.com/kelseyhightower/envconfig"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-plugins/client/selector/static"
+	metrics "github.com/micro/go-plugins/wrapper/monitoring/prometheus"
+	"github.com/paysuper/mfa-service/pkg"
+	"github.com/paysuper/mfa-service/pkg/proto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"go.uber.org/zap"
 	"log"
@@ -52,7 +52,7 @@ func main() {
 	options := []micro.Option{
 		micro.Name(mfa.ServiceName),
 		micro.Version(mfa.Version),
-		micro.WrapHandler(prometheusPlugin.NewHandlerWrapper()),
+		micro.WrapHandler(metrics.NewHandlerWrapper()),
 	}
 
 	if os.Getenv("MICRO_SELECTOR") == "static" {

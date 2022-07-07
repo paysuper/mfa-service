@@ -1,7 +1,7 @@
 mfa-service
 =============
 
-[![Build Status](https://travis-ci.org/ProtocolONE/mfa-service.svg?branch=master)](https://travis-ci.org/ProtocolONE/mfa-service) [![codecov](https://codecov.io/gh/ProtocolONE/mfa-service/branch/master/graph/badge.svg)](https://codecov.io/gh/ProtocolONE/mfa-service)
+[![Build Status](https://travis-ci.org/paysuper/mfa-service.svg?branch=master)](https://travis-ci.org/paysuper/mfa-service) [![codecov](https://codecov.io/gh/paysuper/mfa-service/branch/master/graph/badge.svg)](https://codecov.io/gh/paysuper/mfa-service)
 
 
 # Prerequisites
@@ -15,7 +15,7 @@ Set the environment variable with the address of the redis server, for example `
 
 Download it 
 
-`go get github.com/ProtocolONE/mfa-service`
+`go get github.com/paysuper/mfa-service`
 
 If you need it uou can rebuild proto file with protoc 
 ```
@@ -39,8 +39,8 @@ import (
     "context"
     "fmt"
     "github.com/micro/go-micro"
-    "github.com/ProtocolONE/mfa-service/pkg"
-    "github.com/ProtocolONE/mfa-service/pkg/proto"
+    "github.com/paysuper/mfa-service/pkg"
+    "github.com/paysuper/mfa-service/pkg/proto"
 )
 
 func main() {

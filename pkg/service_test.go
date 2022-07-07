@@ -2,8 +2,8 @@ package mfa
 
 import (
 	"context"
-	"github.com/ProtocolONE/mfa-service/pkg/proto"
 	"github.com/go-redis/redis"
+	"github.com/paysuper/mfa-service/pkg/proto"
 	"github.com/pquerna/otp/totp"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
